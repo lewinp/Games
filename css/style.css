@@ -1,0 +1,173 @@
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        box-sizing: border-box;
+        background-image: url('../img/bg.jpg');
+    }
+    
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+    }
+    
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 20px;
+        padding: 0;
+        color: white;
+        text-shadow: 1px 2px 1px midnightblue;
+    }
+    
+    .comp {
+        position: relative;
+        padding: 50px;
+        background-color: #db4260;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-bottom: 15px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .comp h1 {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -10px;
+        left: -40px;
+        color: white;
+        font-size: 250px;
+        overflow: hidden;
+    }
+    
+    img {
+        border: 2px solid midnightblue;
+        border-radius: 50%;
+        z-index: 5;
+        transition: 0.3s;
+    }
+    
+    li img:hover {
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.5);
+        transform: rotateZ(-10deg) scale(1.1) translateY(-10px);
+    }
+    
+    li img:active {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .comp .hasil {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        bottom: -15%;
+        left: 35%;
+        border-radius: 15px;
+        background-color: white;
+        border: 2px solid white;
+        font-size: 30px;
+        line-height: 60px;
+        visibility: none;
+        font-weight: bold;
+        z-index: 10;
+        transition: 0.3s;
+    }
+    
+    .player {
+        padding: 50px;
+        background-color: royalblue;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .player ul li {
+        display: inline-block;
+    }
+    
+    .player ul li img {
+        margin-left: 10px;
+    }
+    
+    .comp .box {
+        width: 150px;
+        height: 30px;
+        padding: 5px;
+        font-size: 20px;
+        line-height: 30px;
+        border-radius: 10px;
+        color: white;
+        background-color: #6f8eeb;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+    
+    .comp .skorComp {
+        position: absolute;
+        top: 30%;
+        right: -90px;
+    }
+    
+    .comp .skorPlayer {
+        position: absolute;
+        top: 55%;
+        right: -90px;
+    }
+    
+    .comp .skorComp::before {
+        content: 'Computer : ';
+    }
+    
+    .comp .skorPlayer::before {
+        content: 'Player : ';
+    }
+    
+    .who-win {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    
+    .notif-hasil {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 300px;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.8);
+        z-index: 1200;
+        font-size: 30px;
+        line-height: 300px;
+        text-align: center;
+    }
+    
+    .notif-hasil button {
+        position: absolute;
+        top: 80%;
+        left: 42%;
+        width: 100px;
+        height: 40px;
+        color: white;
+        border: 2px solid white;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        transform: scale(1) translateY(0);
+        transition: 0.3s;
+    }
+    
+    .notif-hasil button:hover {
+        background-color: white;
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
+    }
